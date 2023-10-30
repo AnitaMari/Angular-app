@@ -1,0 +1,10 @@
+ <!-- podríamos poner product?.title, etc para que no de error si no hay, pero podemos ponerlo en un condicional así: Si hay producto muestra una cosa y si no otra. Podríamos ponerlo en un div pero lo vamos a poner así mejor para no crear un elemento html más, sino que se encapsule. -->
+<ng-template *ngIf="product">
+    <h2>{{ product.title }}</h2>
+    <p>$ {{ product.price }}</p>
+    <!-- <img src={{ product.images }} alt=""> Mejor como está abajo: -->
+    <img [src]="product.images[0]" alt="">
+</ng-template>
+<ng-template *ngIf="!product">
+    producto no renderizado
+</ng-template>
