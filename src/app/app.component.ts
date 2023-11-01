@@ -19,7 +19,7 @@ export class AppComponent {
   ngOnInit() {
     this.http.get<Product[]>('https://api.escuelajs.co/api/v1/products')
     .subscribe((data) => {
-      this.products = data;
+      this.products = data; //como esto será un array habrá que iterarlo y renderizarlo
     })
   }
 }

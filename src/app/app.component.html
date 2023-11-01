@@ -1,4 +1,8 @@
 <h1>Hola {{ title }}</h1>
 <button (click)="changeTitle()">Change</button>
 
-<app-product title="Este es el título"></app-product>
+<!-- esto lo pusimos inicialmente: -->
+<!-- <app-product title="Este es el título"></app-product> -->
+
+<!-- así iteramos por la array de products. Con el for y creando una variable q se llame product: -->
+<app-product [product]="product" *ngFor="let product of products"></app-product>
