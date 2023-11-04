@@ -1,11 +1,19 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ContactComponent } from './pages/contact/contact.component';
 import { ProductsComponent } from './pages/products/products.component';
-import { ContactComponent } from './components/contact/contact.component';
 
 const routes: Routes = [
-  { path: 'products', component: ProductsComponent },
-  { path: 'contact', component: ContactComponent }
+  { 
+    path: 'contact',
+    title: 'Contacto', // con esta propiedad cambiamos el título de la pestañita de arriba
+    component: ContactComponent 
+  },
+  { 
+    path: 'products',
+    title: 'Productos',
+    component: ProductsComponent }
+
 ];
 
 @NgModule({
